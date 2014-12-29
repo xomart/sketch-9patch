@@ -1,0 +1,16 @@
+.DS_Store
+
+docs/*
+
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+*.GNTPClientService
+project.xcworkspace/
+xcuserdata/
+DerivedData/
+RestKit-0.20.2/
+Externals/*
