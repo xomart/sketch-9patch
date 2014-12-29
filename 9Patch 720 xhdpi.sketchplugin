@@ -1,0 +1,7 @@
+// (cmd 9)
+#import 'library/common.js'
+#import 'library/sandbox.js'
+#import 'library/9patch.js'
+
+var resolutionPath = "drawable-xhdpi";
+Export9Patch(resolutionPath);

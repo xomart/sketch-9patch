@@ -1,0 +1,31 @@
+// (cmd p)
+#import 'library/common.js'
+#import 'library/sandbox.js'
+#import 'library/9patch.js'
+
+[doc showMessage:"Exporting..."]
+
+var rect = [[doc currentPage] contentBounds]
+var path = "~/desktop/";
+
+var temW = [rect width];
+var temH = [rect height];
+rect.width = temW + 400;
+rect.height = temH + 400;
+
+var temX = [rect x];
+var temY = [rect y];
+rect.x = temX - 200;
+rect.y = temY - 200;
+
+var pageName = [[doc currentPage] name]
+
+if (in_sandbox()) {
+	sandboxAccess.accessFilePath_withBlock_persistPermission(path, function(){
+	[doc saveArtboardOrSlice:rect toFile: path + pageName + ".jpg"];
+	}, true)
+} else {
+	[doc saveArtboardOrSlice:rect toFile: path + pageName + ".jpg"];
+}
+
+[doc showMessage:"OK, check " + pageName + ".jpg on your desk."]
