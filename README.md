@@ -1,6 +1,6 @@
 sketch-9patch
 =============
 
-Convert one or more artboards to 9patch format, then export xxx.9.png to desktop.
+Convert artboards to 9patch layout, then export xxx.9.png to desktop.
 
-A test.
+You can edit the mark layers in the layers group "$MarksGroup", then export again.
