@@ -1,6 +1,6 @@
 # 9 Patch Generator
 
-This plugin would convert selected artboards to 9patch layout, then export them to xxx.9.png at Desktop.
+This Sketch plugin would convert selected artboards to 9patch layout, then export them to xxx.9.png at Desktop.
 
 ## Note
 
