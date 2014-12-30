@@ -17,4 +17,4 @@ You can edit the mark layers in the layers group "$MarksGroup", then export agai
 * Follow [@CattLiu](http://weibo.com/maundytime) on Weibo
 
 ## Special Thanks
-[@utom](http://twitter.com/utom)'s [Sketch Measure](https://github.com/utom/sketch-measure)
+[@utom](http://twitter.com/utom)'s [Sketch Measure](https://github.com/utom/sketch-measure), thanks for his clean & useful code :)
