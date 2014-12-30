@@ -8,4 +8,4 @@ You can edit the mark layers in the layers group "$MarksGroup", then export agai
 
 ## Installing Plugins
 1. [Download the ZIP file](https://github.com/maundytime/sketch-9patch/archive/master.zip)
-2. Copy the contents to the plugin folder (Open up Sketch, and go to `Plugins` › `Reveal Plugins Folder…` to open it.)
+2. Unzip and copy the contents to the plugin folder (Open up Sketch, and go to `Plugins` › `Reveal Plugins Folder…` to open it.)
