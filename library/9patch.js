@@ -2,7 +2,9 @@ function Set9Patch(artboard){
   var length = [[artboard layers] count];
   if ([[artboard layers] objectAtIndex:length-1].name() != "$MarksGroup")
   {
-    [[artboard absoluteRect] expandBy:1];
+    // [[artboard absoluteRect] expandBy:1]; // This not work in new version Sketch!
+    rectOriginal = getRect(artboard);
+    setSize(artboard, rectOriginal.width+2, rectOriginal.height+2, 1);
     for (var i=0;i<length;i++)
     {
       var l = [[artboard layers] objectAtIndex:i];
