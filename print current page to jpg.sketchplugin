@@ -1,7 +1,11 @@
 // (cmd p)
+
 #import 'library/common.js'
 #import 'library/sandbox.js'
 #import 'library/9patch.js'
+#import 'library/inventory.js'
+
+var originalSelection = context.selection;
 
 [doc showMessage:"Exporting..."]
 
@@ -18,6 +22,21 @@ var temY = [rect y];
 rect.x = temX - 200;
 rect.y = temY - 200;
 
+// Add and set a distinguishable bg.
+
+distinguishable = addShape("$Distinguishable", [doc currentPage]);
+setPosition(distinguishable, [rect x], [rect y], false);
+setSize(distinguishable, [rect width], [rect height]);
+setColor(distinguishable, '#f2f2f2', 1);
+
+// Move bg to back.
+
+doc.currentPage().deselectAllLayers();
+distinguishable.setIsSelected(true);
+com.getflourish.utils.sendToBack();
+
+// Export jpg to desktop.
+
 var pageName = [[doc currentPage] name]
 
 if (in_sandbox()) {
@@ -29,3 +48,12 @@ if (in_sandbox()) {
 }
 
 [doc showMessage:"OK, check " + pageName + ".jpg on your desk."]
+
+// Delete the distinguishable bg.
+
+removeLayer(distinguishable);
+
+// Restore selection
+
+for (var i=0; i<originalSelection.count(); i++) {
+      originalSelection[i].setIsSelected(true);} 
