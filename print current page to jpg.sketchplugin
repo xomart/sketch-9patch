@@ -3,7 +3,6 @@
 #import 'library/common.js'
 #import 'library/sandbox.js'
 #import 'library/9patch.js'
-#import 'library/inventory.js'
 
 var originalSelection = context.selection;
 
@@ -33,7 +32,7 @@ setColor(distinguishable, '#f2f2f2', 1);
 
 doc.currentPage().deselectAllLayers();
 distinguishable.setIsSelected(true);
-com.getflourish.utils.sendToBack();
+[NSApp sendAction: 'moveToBack:' to: nil from: context.document];
 
 // Export jpg to desktop.
 
